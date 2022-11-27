@@ -1,0 +1,12 @@
+image: docker:stable
+
+variable:
+  IMAGE_NAME: "alpine_python:1.1.0"
+
+services: -docker:19.03.12-dind
+
+build image:
+  script:
+    - docker build -t registry.gitlab.com/my_project121/docker_image_build
+    - docker login registry.gitlab.com
+    - docker push registry.gitlab.com/my_project121/docker_image_build
