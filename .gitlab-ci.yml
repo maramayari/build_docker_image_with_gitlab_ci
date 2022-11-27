@@ -8,6 +8,6 @@ services:
 
 build image:
   script:
-    - docker build -t registry.gitlab.com/my_project121/docker_image_build
+    - docker build -t registry.gitlab.com/my_project121/docker_image_build/$IMAGE_NAME
     - docker login registry.gitlab.com
-    - docker push registry.gitlab.com/my_project121/docker_image_build
+    - docker push registry.gitlab.com/my_project121/docker_image_build/$IMAGE_NAME
