@@ -1,0 +1,1 @@
+# build_docker_image_with_gitlab_ci
